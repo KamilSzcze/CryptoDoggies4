@@ -1,4 +1,4 @@
-import data from '../build/contracts/DoggiesContract.json' assert { type: "json" };
+import data from './DoggiesContract.json' assert { type: "json" };
 
 
 var account
