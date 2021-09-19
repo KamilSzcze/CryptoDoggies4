@@ -1,0 +1,218 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crypto Doggies </title>
+  <script type="text/javascript" src="assets/js/jquery-3.4.1.js"></script>
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <script src="./assets/bootstrap/js/popper.js"></script>
+  <script src="./assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.5.0/web3.min.js" integrity="sha512-0/nXBDmnbXRIkGvwIK2UWg4F8xscIFZHGl2sWevr6f0DnFEqZh4uTw78qLQYC16tVxbbHhoaaZLSBoIopZQucg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="./abi.js"></script>
+
+  <link rel="stylesheet" href="assets/css/animations.css">
+  <link rel="stylesheet" href="assets/css/mystyle.css">
+  <link rel="stylesheet" href="assets/css/dogs.css">
+  <link rel="stylesheet" href="assets/css/colors.css">
+  <link rel="stylesheet" href="assets/css/factory.css">
+  <link rel="stylesheet" href="assets/css/frontend.css">
+</head>
+  <body>
+    <div class="container p-5" style="margin-top: 12vh;margin-bottom: 10vh;">
+        <div align="center">
+            <h1 class="c-white">Doggies-Factory</h1>
+            <p class="c-white">Create your custom Doggie</p>
+        </div>
+        <div class="row">
+            <div class="col-lg-5 catBox m-2 light-b-shadow">
+                <div class = "dog">
+                    <div class = "tail"></div>
+                    <div class = "fringe">
+                        <div class = "fringe_1"></div>
+                        <div class = "fringe_2"></div>
+                        <div class = "fringe_3"></div>
+                        <div class = "fringe_4"></div>
+                        <div class = "fringe_5"></div>
+                    </div>                    
+                    <div class = "cheeks"></div>
+                    <div class = "chin"></div>
+                    <div class = "mouth"></div>
+                    <div class = "mouth_2"></div>
+                    <div class = "mouth_3"></div>
+                    <!-- <div class = "saliva"></div> -->
+                    <div class = "tongue">
+                        <div class = "tongue_1"></div>
+                        <div class = "tongue_2"></div>
+                        
+                        <div class = "tongue_4"></div>
+                        <div class = "tongue_5"></div>
+                       <!-- <div class = "saliva_1"></div>
+                        <div class = "saliva_2"></div> 
+                        <div class = "saliva_3"></div> -->
+                    </div>
+                    
+                    <div class = "left_cheek"></div>
+                    <div class = "right_cheek"></div>
+                    <div class = "nose"></div>
+                    <div class = "neck"></div>
+                    <div class = "body">
+                        <div class = "belly"></div>
+                    </div>
+                    <div class = "left_foot"></div>
+                    <div class = "right_foot"></div>
+                    <div class = "back_left_foot"></div>
+                    <div class = "back_right_foot"></div>
+                    <div class = "left_leg"></div>
+                    <div class = "right_leg"></div>
+    
+                    <div class="ears">
+                        <div class = "ear left_ear">
+                            <div class = "ear left_inner_ear"></div>
+                        </div>
+                        <div class = "ear left_ear_end"></div>
+                        <div class = "ear right_ear">
+                            <div class = "ear right_inner_ear"></div>
+                        </div>
+                        <div class = "ear right_ear_end"></div>
+                    </div>
+
+                    <div class = "head">
+                        <div class = "eyes">                           
+                            <div class = "eye">
+                                <div class = "left_inner_eye">
+                                    <div class = "left_outer_pupil">
+                                        <div class = "pupils">
+                                            <div class = "left_inner_pupil"></div>
+                                            <div class = "left_inner_pupil_2"></div>
+                                            <div class = "left_eye_lid"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class = "eye">
+                                <div class = "right_inner_eye">
+                                    <div class = "right_outer_pupil">
+                                        <div class = "pupils">
+                                            <div class = "right_inner_pupil"></div>
+                                            <div class = "right_inner_pupil_2"></div>
+                                            <div class = "right_eye_lid"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>    
+                        </div>
+                        
+                    </div>
+                </div>
+                <br>
+                <div class="dnaDiv" id="catDNA">
+                    <b>
+                        DNA:
+                        <!-- Colors -->
+                         <span id="dnabody"></span>
+                         <span id="dnamouth"></span>
+                         <span id="dnaeyes"></span>
+                         <span id="dnaears"></span>
+                        
+                         <!-- Cattributes -->
+                         <span id="dnashape"></span>
+                         <span id="dnadecoration"></span>
+                         <span id="dnadecorationMid"></span>
+                         <span id="dnadecorationSides"></span>
+                         <span id="dnaanimation"></span>
+                         <span id="dnaspecial"></span>
+                    </b>
+                </div>
+            </div>
+
+            <div class="col-lg-6 cattributes m-2 light-b-shadow">
+
+                <!-- Cat colors -->
+                <div id="catColors">
+                    <div class="buttons">
+                        <div style="display:inline; float:left">
+                            <button type="button" class="btn btn-primary colors">Colors</button>
+                            <button type="button" class="btn btn-primary dogtributes">Dogributes</button>
+                        </div>
+                        <div style="vertical-align:top; float: right">
+                            <button type="button" class="btn btn-success random">Random</button>
+                            <button type="button" class="btn btn-success default">Default</button>
+                        </div>
+                        <br><br><br>
+                    </div>
+
+                    <div class="tab colors">
+                        <div class="form-group">
+                            <label for="formControlRange"><b>Head, body and ears colour</b><span class="badge badge-light ml-2" id="headcode"></span></label>
+                            <input type="range" min="10" max="98" class="form-control-range" id="bodycolor">
+                        </div>
+        
+                        <div class="form-group">
+                            <label for="formControlRange"><b>Mouth, belly, inner ears and outer eyes colour</b><span class="badge badge-light ml-2" id="bellycode"></span></label>
+                            <input type="range" min="10" max="98" class="form-control-range" id="bellycolor">
+                        </div>
+        
+                        <div class="form-group">
+                            <label for="formControlRange"><b>Eye colour</b><span class="badge badge-light ml-2" id="eyescode"></span></label>
+                            <input type="range" min="10" max="98" class="form-control-range" id="eyescolor">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="formControlRange"><b>Fringe, paws, tail and eyelids colour</b><span class="badge badge-light ml-2" id="fringecode"></span></label>
+                            <input type="range" min="10" max="98" class="form-control-range" id="fringecolor">
+                        </div>
+                    </div>
+                    
+                    <div class="tab dogtributes">
+                        <div class="form-group">
+                            <label for="formControlRange"><b>Mood Types</b><span class="badge badge-light ml-2" id="eyeName"></span></label>
+                            <input type="range" min="1" max="9" class="form-control-range" id="eyeshape">
+                        </div>
+        
+                        <div class="form-group">
+                            <label for="formControlRange"><b>Fringe Types</b><span class="badge badge-light ml-2" id="decorationName"></span></label>
+                            <input type="range" min="1" max="9" class="form-control-range" id="fringeTypes">
+                        </div>
+        
+                        <div class="form-group">
+                            <label for="formControlRange"><b>Fringe colour 1</b><span class="badge badge-light ml-2" id="fringecode1"></span></label>
+                            <input type="range" min="10" max="98" class="form-control-range" id="fringecolor1">
+                        </div>
+        
+                        <div class="form-group">
+                            <label for="formControlRange"><b>Fringe colour 2</b><span class="badge badge-light ml-2" id="fringecode2"></span></label>
+                            <input type="range" min="10" max="98" class="form-control-range" id="fringecolor2">
+                        </div>
+        
+                        <div class="form-group">
+                            <label for="formControlRange"><b>Animation</b><span class="badge badge-light ml-2" id="animationName"></span></label>
+                            <input type="range" min="1" max="9" class="form-control-range" id="animation">
+                        </div>
+                    </div>
+                    <br><br>
+                    
+                    
+                    <button type="button" class="btn btn-danger create"><b>Create</b></button>
+                    
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    
+    
+
+
+    <footer align="left">
+        <p>Ivan on Tech Academy Bootcamp July 2020</p>
+    </footer>
+
+  </body>
+  <script type="module" src="./index.js"></script>
+  <script src="assets/js/colors.js"></script>
+  <script src="assets/js/catSettings.js"></script>
+  <script src="assets/js/catFactory.js"></script>
+  <script src="assets/js/jquery-3.4.1.js"></script>
+
+</html>
